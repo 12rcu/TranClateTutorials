@@ -1,5 +1,5 @@
 # TranClate Tutorials
-A Tutorial Repository with Motion Canvas
+A Tutorial Repository with [Motion Canvas](https://motioncanvas.io/)
 
 ## Setup
 
