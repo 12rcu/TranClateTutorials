@@ -16,7 +16,15 @@
     },
     {
       "name": "beh",
-      "targetTime": 12.830774611148662
+      "targetTime": 13.845774611148663
+    },
+    {
+      "name": "res",
+      "targetTime": 16.310555555555556
+    },
+    {
+      "name": "beh-comp",
+      "targetTime": 19.44140625
     }
   ]
 }

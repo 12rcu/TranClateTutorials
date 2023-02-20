@@ -12,6 +12,12 @@ export default makeScene2D(function* (view) {
     
     
     
+    
+    
+    
+    
+    
+    
 }`
 
     yield view.add(
@@ -51,6 +57,12 @@ export default makeScene2D(function* (view) {
     ${edit('', 'name()')}    
     
     
+    
+    
+    
+    
+    
+    
 }`;
 
     yield* waitUntil('wait_entity_name');
@@ -59,21 +71,67 @@ export default makeScene2D(function* (view) {
     ${edit('name()', 'name("unique_name", "Display Name")')}    
     
     
+    
+    
+    
+    
+    
+    
 }`;
 
     yield* waitUntil('wait_entity_name_2');
 
     yield* code().edit(1.3, lines(2,2))`entity {
     name("unique_name", "Display Name") 
-    ${edit('', 'behaviour {  }')}  
+    ${edit('', 'behaviour {')}  
+    
+    
+    
+    
+    
+    ${edit('', '}')}  
     
 }`;
 
     yield* waitUntil('beh');
 
-    yield* code().edit(1.3, lines(3,3))`entity {
+    yield* code().edit(1.3, lines(2,9))`entity {
     name("unique_name", "Display Name")
-    behaviour {  }
+    behaviour { 
+    
+    
+    
+    
+    
+    }
     ${edit('', 'resource {  }')}  
+}`;
+
+    yield* waitUntil('res');
+
+    yield* code().edit(1.3, lines(3,7))`entity {
+    name("unique_name", "Display Name")
+    behaviour {
+        ${edit('', 'components {')}  
+            
+            
+            
+        ${edit('', '}')}  
+    }
+    resource {  }
+}`;
+
+    yield* waitUntil('beh-comp');
+
+    yield* code().edit(1.3, lines(4,6))`entity {
+    name("unique_name", "Display Name")
+    behaviour {
+        components {
+            ${edit('', 'nameAble {')} 
+                ${edit('', 'alwaysShow = true')} 
+            ${edit('', '}')} 
+        }  
+    }
+    resource {  }
 }`;
 });
