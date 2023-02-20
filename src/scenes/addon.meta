@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "seed": 4271347520,
+  "timeEvents": [
+    {
+      "name": "initial_pause",
+      "targetTime": 2.4887558909910514
+    },
+    {
+      "name": "addon_header_pause",
+      "targetTime": 9.460216742936502
+    },
+    {
+      "name": "end",
+      "targetTime": 12.35869208615076
+    }
+  ]
+}
